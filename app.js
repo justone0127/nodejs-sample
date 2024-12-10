@@ -16,15 +16,11 @@ app.get("/", (req, res) => {
         <style>
           body {
             background-color: ${currentColor};
-            color: #333;
+            color: #000; /* 검정색 텍스트 */
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 50px;
-          }
-          img {
-            max-width: 200px;
-            margin-top: 20px;
           }
           h1 {
             font-size: 2.5em;
@@ -35,7 +31,6 @@ app.get("/", (req, res) => {
       <body>
         <h1>Hello, OpenShift!</h1>
         <p>Current background color: <strong>${currentColor}</strong></p>
-        <img src="/logo.png" alt="KECO Logo" />
       </body>
     </html>
   `);
