@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
       <body>
         <h1>Hello, KECO!</h1>
         <p>Current background color: <strong>${currentColor}</strong></p>
-        <img src="https://github.com/justone0127/nodejs-sample/blob/main/public/logo.png" alt="KECO Logo" />
+        <img src="/logo.png" alt="KECO Logo" />
       </body>
     </html>
   `);
