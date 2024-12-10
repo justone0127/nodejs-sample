@@ -1,7 +1,11 @@
 const express = require("express");
-const app = express();
+const path = require("path");
 
+const app = express();
 let currentColor = "blue"; // 초기 배경 색상
+
+// 정적 파일 제공
+app.use(express.static(path.join(__dirname, "public")));
 
 // 메인 라우트: Hello World 페이지
 app.get("/", (req, res) => {
@@ -17,11 +21,16 @@ app.get("/", (req, res) => {
             text-align: center;
             padding: 50px;
           }
+          img {
+            max-width: 200px;
+            margin-top: 20px;
+          }
         </style>
       </head>
       <body>
         <h1>Hello, KECO!</h1>
         <p>Current background color: <strong>${currentColor}</strong></p>
+        <img src="./public/logo.png" alt="KECO Logo" />
       </body>
     </html>
   `);
