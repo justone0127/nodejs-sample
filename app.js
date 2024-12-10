@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   res.send(`
     <html>
       <head>
-        <title>Hello World</title>
+        <title>Hello KECO</title>
         <style>
           body {
             background-color: ${currentColor};
@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
         </style>
       </head>
       <body>
-        <h1>Hello, OpenShift!</h1>
+        <h1>Hello, KCEO!</h1>
         <p>Current background color: <strong>${currentColor}</strong></p>
       </body>
     </html>
@@ -46,3 +46,13 @@ app.get("/set-color/:color", (req, res) => {
   if (validColors[newColor]) {
     currentColor = validColors[newColor];
     res.send(`Color changed to ${newColor}`);
+  } else {
+    res.status(400).send('Invalid color! Use "blue", "green", "pink", "yellow", or "lavender".');
+  }
+});
+
+// 서버 실행
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
+});
