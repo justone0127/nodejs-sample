@@ -45,14 +45,4 @@ app.get("/set-color/:color", (req, res) => {
 
   if (validColors[newColor]) {
     currentColor = validColors[newColor];
-    res.send(`Color changed to ${newColor}`);
-  } else {
-    res.status(400).send('Invalid color! Use "blue", "green", "pink", "yellow", or "lavender".');
-  }
-});
-
-// 서버 실행
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
-});
+    res.send(`Color changed to ${newColor}`)
