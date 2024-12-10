@@ -45,4 +45,4 @@ app.get("/set-color/:color", (req, res) => {
 
   if (validColors[newColor]) {
     currentColor = validColors[newColor];
-    res.send(`Color changed to ${newColor}`)
+    res.send(`Color changed to ${newColor}`);
