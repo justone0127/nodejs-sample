@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-let currentColor = "#add8e6"; // 초기 배경 색상
+let currentColor = "#afeeee"; // 초기 배경 색상
 
 // 정적 파일 제공
 app.use(express.static(path.join(__dirname, "public")));
