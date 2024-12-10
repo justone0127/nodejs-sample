@@ -1,11 +1,7 @@
 const express = require("express");
-const path = require("path");
 
 const app = express();
 let currentColor = "#add8e6"; // 초기 배경 색상 (연한 파란색)
-
-// 정적 파일 제공 설정
-app.use(express.static(path.join(__dirname, "public")));
 
 // 메인 라우트
 app.get("/", (req, res) => {
