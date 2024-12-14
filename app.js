@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   res.send(`
     <html>
       <head>
-        <title>Hello KECO PoC!!</title>
+        <title>Hello KECO PoC!!**</title>
         <style>
           body {
             background-color: ${currentColor};
